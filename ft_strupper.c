@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   putendl_fd.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chaidel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 13:46:35 by chaidel           #+#    #+#             */
-/*   Updated: 2021/12/11 10:12:49 by chaidel          ###   ########.fr       */
+/*   Created: 2021/12/14 17:21:40 by chaidel           #+#    #+#             */
+/*   Updated: 2021/12/14 18:20:53 by chaidel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_putendl_fd(char *s, int fd)
+char	*ft_strupper(char *str)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	if (s && fd >= 0)
+	i = 0;
+	while (str[i])
 	{
-		len = ft_putstr_fd(s, fd);
-		write(fd, "\n", 1);
-		return (len + 1);
+		if ((str[i] >= 'a' && str[i] <= 'z'))
+			str[i] += -32;
+		i++;
 	}
-	return (len);
+	return (str);
 }

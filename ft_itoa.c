@@ -6,19 +6,19 @@
 /*   By: chaidel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 09:33:23 by chaidel           #+#    #+#             */
-/*   Updated: 2021/11/28 17:23:51 by chaidel          ###   ########.fr       */
+/*   Updated: 2021/12/15 18:13:36 by chaidel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	ft_negative(int *sign, int *number)
+static void	ft_negative(int *sign, int *number)
 {
 	*sign = 1;
 	*number = -(*number);
 }
 
-static	int	ft_get_len(int number)
+static int	ft_get_len(int number)
 {
 	int	len;
 

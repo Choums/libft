@@ -6,14 +6,18 @@
 /*   By: chaidel <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 13:20:16 by chaidel           #+#    #+#             */
-/*   Updated: 2021/12/08 15:51:06 by chaidel          ###   ########.fr       */
+/*   Updated: 2021/12/10 19:26:14 by chaidel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+size_t	ft_putchar_fd(char c, int fd)
 {
 	if (fd >= 0)
+	{
 		write(fd, &c, 1);
+		return (1);
+	}
+	return (0);
 }

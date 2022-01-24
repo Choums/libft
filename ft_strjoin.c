@@ -12,24 +12,6 @@
 
 #include "libft.h"
 
-static	char	*ft_strcat(char *dest, const char *src)
-{
-	int	i;
-	int	n;
-
-	i = 0;
-	n = 0;
-	while (dest[n])
-		n++;
-	while (src[i])
-	{
-		dest[n + i] = src[i];
-		i++;
-	}
-	dest[n + i] = '\0';
-	return (dest);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
